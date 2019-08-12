@@ -18,11 +18,6 @@ sleep 3
 sudo apt-get install dos2unix
 sudo dos2unix time1.sh
 sudo dos2unix 75.sh
-sudo dos2unix 50.sh
-sudo dos2unix 80.sh
-sudo dos2unix 65.sh
-sudo dos2unix 90.sh
-sudo dos2unix 40.sh
 
 touch /tmp/at.txt
 chmod +x /tmp/at.txt
